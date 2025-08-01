@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dirgahayu RI ke-80</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">INDONESIA MERDEKA</span>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#daftar">Daftar Lomba</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="beranda">
+        <div class="hero">
+            <img src="logoHUT RI 80.png" class="bendera" alt="Bendera Merah Putih">
+            <h1>DIRGAHAYU RI KE-80</h1>
+            <p>“Sekali Merdeka Tetap Merdeka!”</p>
+        </div>
+    </header>
+
+    <section class="content-grid fade-in" id="sejarah">
+        <div class="card sejarah">
+            <h2>Sejarah Kemerdekaan</h2>
+            <p>17 Agustus adalah Hari Kemerdekaan Republik Indonesia, diperingati setiap tahun untuk mengenang momen proklamasi kemerdekaan pada 17 Agustus 1945. Peristiwa ini menandai berakhirnya penjajahan dan awal terbentuknya negara Indonesia yang merdeka dan berdaulat.</p>
+            <img src="proklamasi.jpg" alt="Proklamasi">
+        </div>
+    </section>
+
+    <section class="content-grid fade-in" id="galeri">
+        <div class="card galeri">
+            <h2>Suasana Kemerdekaan</h2>
+            <div class="galeri-grid">
+                <img src="lomba-kelereng.jpg" alt="">
+                <img src="lomba-makan krupuk.jpg" alt="">
+                <img src="tarik-tambang.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section fade-in" id="daftar">
+        <h2>Formulir Pendaftaran Lomba</h2>
+        <form id="formLomba" onsubmit="return handleSubmit(event)">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="telepon">No. Telepon:</label>
+            <input type="text" id="telepon" required>
+
+            <label for="lomba">Jenis Lomba:</label>
+            <select id="lomba" required>
+                <option value="">-- Pilih Lomba --</option>
+                <option value="balap karung">Balap Karung</option>
+                <option value="makan kerupuk">Makan Kerupuk</option>
+                <option value="panjat pinang">Panjat Pinang</option>
+            </select>
+
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <h3>Pendaftaran Berhasil!</h3>
+            <p id="modalMessage"></p>
+            <button onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
